@@ -5,37 +5,51 @@
 @tailwind utilities;
 
 @layer components {
-  /* Main */
-  main {
-    @apply flex items-center flex-col p-8 font-montserrat;
+  body {
+    @apply p-2 bg-cream tablet:p-10 laptop:px-12 xlaptop:px-[8rem] overflow-x-hidden;
   }
 
+  /* Main */
+  main {
+    @apply flex items-center flex-col justify-center  font-montserrat w-full tablet:flex-row tablet:h-[70vh];
+  }
+
+  section {
+    @apply p-6 bg-zinc rounded-b-lg shadow-2xl flex gap-3 laptop:gap-6 flex-col tablet:h-[70vh] tablet:rounded-e-[16px] justify-center tablet:shadow-none tablet:shadow-3xl tablet:rounded-bl-none;
+  }
   /* img */
   .img {
-    @apply w-full rounded-t-lg h-[40vh] object-cover;
+    @apply w-full rounded-t-lg h-[40vh] tablet:h-[100%] tablet:rounded-t-none object-cover tablet:rounded-s-[16px];
   }
 
   h3 {
-    @apply tracking-widest;
+    @apply tracking-widest  text-dark-grayish-blue/80 font-semibold;
   }
 
   h1 {
     @apply font-fraunces font-extrabold text-[30px] leading-8;
   }
 
+  /* Article */
   article {
-    @apply text-sm;
+    @apply text-sm text-dark-grayish-blue/60 font-semibold;
   }
 
+  /* Prices */
+  div {
+    @apply flex gap-6 items-center;
+  }
   .price1 {
-    @apply text-[30px] font-extrabold font-fraunces;
+    @apply text-[30px] font-extrabold font-fraunces text-dark-cyan;
   }
 
   .price2 {
-    @apply font-[12px] line-through;
+    @apply font-[12px]  text-dark-grayish-blue/80 font-semibold line-through;
   }
 
+  /* Button */
+
   .btn {
-    @apply py-4 flex gap-4 bg-dark-cyan w-[100%] items-center justify-center font-bold;
+    @apply text-cream py-4 flex gap-4 bg-dark-cyan w-[100%] items-center justify-center font-bold rounded-[10px] hover:bg-very-dark-blue transform transition hover:-translate-y-1;
   }
 }
